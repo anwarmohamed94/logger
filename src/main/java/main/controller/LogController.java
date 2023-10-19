@@ -46,7 +46,7 @@ public class LogController {
 	 */
 	@Operation(description = "POST api that allows log entry creation and then sent to matching kafka topic")
 	@PostMapping("/rest-log")
-	@SecurityRequirement(name="BearerAuth")
+	//@SecurityRequirement(name="BearerAuth")
     public ResponseEntity<String> consumeLog(@RequestBody @Valid Log log) 
 	{
 		// Get log file name
