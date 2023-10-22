@@ -44,9 +44,9 @@ public class LogProducerService {
 		String topicName = source.toString();
         Message<Log> message = MessageBuilder
                 .withPayload(log)
-                .setHeader(KafkaHeaders.TOPIC, topicName)
+                .setHeader(KafkaHeaders.TOPIC, "SOURCE_A")
                 .build();
-        System.out.println("IN LOG PRODUCER : " + topicName);
+       // System.out.println("IN LOG PRODUCER : " + topicName);
 		kafkaTemplate.send(message);
 	}
 
